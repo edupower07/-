@@ -60,13 +60,13 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="?page=index" target="_top">🏠 トップ</a>
-    <a href="?page=koutei" target="_top">① 工程</a>
-    <a href="?page=hito" target="_top">② 人々のくふう</a>
-    <a href="?page=buhin" target="_top">③ 部品</a>
-    <a href="?page=sekai" target="_top" class="active">④ 世界へ</a>
-    <a href="?page=kankyo" target="_top">⑤ 環境</a>
-    <a href="?page=matome" target="_top">✅ まとめ</a>
+    <a href="<?= getUrl() ?>?page=index" target="_top">🏠 トップ</a>
+    <a href="<?= getUrl() ?>?page=koutei" target="_top">① 工程</a>
+    <a href="<?= getUrl() ?>?page=hito" target="_top">② 人々のくふう</a>
+    <a href="<?= getUrl() ?>?page=buhin" target="_top">③ 部品</a>
+    <a href="<?= getUrl() ?>?page=sekai" target="_top" class="active">④ 世界へ</a>
+    <a href="<?= getUrl() ?>?page=kankyo" target="_top">⑤ 環境</a>
+    <a href="<?= getUrl() ?>?page=matome" target="_top">✅ まとめ</a>
   </div>
 </nav>
 
@@ -334,8 +334,8 @@
   </div>
 
   <div style="margin-top:24px; display:flex; gap:12px; justify-content:space-between;">
-    <a href="?page=buhin" target="_top" style="color:var(--blue); text-decoration:none; font-size:.9rem;">← ③ 部品にもどる</a>
-    <a href="?page=kankyo" target="_top" style="color:var(--blue); text-decoration:none; font-size:.9rem; font-weight:700;">⑤ 環境にやさしい車づくりへ →</a>
+    <a href="<?= getUrl() ?>?page=buhin" target="_top" style="color:var(--blue); text-decoration:none; font-size:.9rem;">← ③ 部品にもどる</a>
+    <a href="<?= getUrl() ?>?page=kankyo" target="_top" style="color:var(--blue); text-decoration:none; font-size:.9rem; font-weight:700;">⑤ 環境にやさしい車づくりへ →</a>
   </div>
 
 </main>
