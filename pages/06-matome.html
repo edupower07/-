@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✅ まとめ・クイズ｜自動車づくりにはげむ人々</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .score-display {
+      font-size: 2rem;
+      font-weight: 900;
+      text-align: center;
+      color: var(--blue);
+      margin: 14px 0;
+    }
+    .final-msg {
+      background: linear-gradient(135deg, #2e8b57, #1a5c38);
+      color: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      display: none;
+      margin-top: 20px;
+    }
+    .final-msg h3 { font-size: 1.2rem; margin-bottom: 8px; }
+    .final-msg p  { font-size: .9rem; opacity: .9; }
+
+    .think-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px 22px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+    }
+    .think-box h4 {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 8px;
+    }
+    .think-box p {
+      font-size: .85rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .think-box textarea {
+      width: 100%;
+      min-height: 80px;
+      border: 1px solid #c8dff5;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-family: inherit;
+      font-size: .88rem;
+      resize: vertical;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-icon">✅</div>
+    <div class="header-title">
+      <h1>まとめ・チャレンジクイズ</h1>
+      <p>自動車づくりにはげむ人々｜5年生 社会科</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html">🏠 トップ</a>
+    <a href="01-koutei.html">① 工程</a>
+    <a href="02-hito.html">② 人々のくふう</a>
+    <a href="03-buhin.html">③ 部品</a>
+    <a href="04-sekai.html">④ 世界へ</a>
+    <a href="05-kankyo.html">⑤ 環境</a>
+    <a href="06-matome.html" class="active">✅ まとめ</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- まとめ -->
+  <h2 class="section-title">📋 学習のまとめ</h2>
+
+  <div class="matome-box">
+    <h3>① じどうしゃができるまで（工程）</h3>
+    <ul>
+      <li>プレス → 溶接 → 塗装 → 組み立て → 検査 の順で作られる</li>
+      <li>ロボットと人間が協力して、約4,000か所を溶接する</li>
+      <li>完成した車は全て検査をパスしたものだけが出荷される</li>
+    </ul>
+  </div>
+
+  <div class="matome-box">
+    <h3>② はたらく人々のくふうと努力</h3>
+    <ul>
+      <li>「カイゼン」：毎日少しずつ改善し続ける考え方（世界共通語）</li>
+      <li>「カンバン方式」：必要なものを必要なときに届けるしくみ（ムダをなくす）</li>
+      <li>問題が起きたらラインを止めても原因を調べる「アンドン」文化</li>
+    </ul>
+  </div>
+
+  <div class="matome-box">
+    <h3>③ 部品はどこから？</h3>
+    <ul>
+      <li>1台に約3万点の部品が使われる</li>
+      <li>日本全国・海外の約4万社の関連企業から部品が届く</li>
+      <li>愛知県（トヨタ）・神奈川県（日産）を中心に工場が集中</li>
+    </ul>
+  </div>
+
+  <div class="matome-box">
+    <h3>④ 世界へとどく日本の車</h3>
+    <ul>
+      <li>日本の自動車輸出台数は年間約500万台・170以上の国へ</li>
+      <li>最大の輸出先はアメリカ（約40%）</li>
+      <li>現地生産（海外工場）でコスト・貿易摩擦を減らす工夫をしている</li>
+    </ul>
+  </div>
+
+  <div class="matome-box">
+    <h3>⑤ かんきょうにやさしい車づくり</h3>
+    <ul>
+      <li>ハイブリッド車（HV）：ガソリン＋電気でCO₂を減らす</li>
+      <li>電気自動車（EV）：走行中にCO₂をほぼ出さない（日産リーフなど）</li>
+      <li>燃料電池車（FCV）：水素で走り、排気は水だけ（トヨタMIRAIなど）</li>
+      <li>工場での太陽光・廃材リサイクル・水のリサイクルも進めている</li>
+    </ul>
+  </div>
+
+  <!-- チャレンジクイズ -->
+  <h2 class="section-title">🏆 チャレンジクイズ！全10問</h2>
+  <p style="font-size:.88rem; color:#555; margin-bottom:16px;">全部のページを調べてから挑戦しよう。何問正解できるかな？</p>
+
+  <div id="quiz-area">
+
+    <div class="quiz-box" data-q="1">
+      <div class="quiz-q">①　自動車の工程で「プレス」の次におこなわれるのは？</div>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '塗装はプレス・溶接の後だよ。')">塗装</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, true, 'せいかい！プレスで形をつくったパーツを溶接でつなぎ合わせる。')">溶接</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '検査は最後の工程だよ。')">検査</button>
+      </div>
+      <div class="quiz-result"></div>
+    </div>
+
+    <div class="quiz-box" data-q="2">
+      <div class="quiz-q">②　トヨタが世界に広めた「少しずつ毎日よりよくする」考え方をなんという？</div>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, 'デジタル化は別の話だよ。')">デジタル化</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, 'リストラは別の意味だよ。')">リストラ</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, true, 'せいかい！「KAIZEN」は今や世界共通語として使われているよ。')">カイゼン（KAIZEN）</button>
+      </div>
+      <div class="quiz-result"></div>
+    </div>
+
+    <div class="quiz-box" data-q="3">
+      <div class="quiz-q">③　1台の自動車に使われる部品の数はおよそ？</div>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '300点はスマートフォンくらい。もっと多いよ。')">約300点</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, true, 'せいかい！なんと約3万点！毎秒1つ数えると8時間以上かかる量だよ。')">約3万点</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '3億点は多すぎ。飛行機でも600万点だよ。')">約3億点</button>
+      </div>
+      <div class="quiz-result"></div>
+    </div>
+
+    <div class="quiz-box" data-q="4">
+      <div class="quiz-q">④　日本で自動車関連工場が最も多く集まっている都道府県は？</div>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="scoreQuiz(this, true, 'せいかい！トヨタ自動車の本社がある豊田市を中心に、愛知県は自動車産業の中心地だよ。')">愛知県</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '神奈川は日産の本社があるけど、最大ではないよ。')">神奈川県</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '東京は本社機能が多いけど、工場の数では愛知が最大だよ。')">東京都</button>
+      </div>
+      <div class="quiz-result"></div>
+    </div>
+
+    <div class="quiz-box" data-q="5">
+      <div class="quiz-q">⑤　「カンバン方式」とはどんなしくみ？</div>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '工場の看板を管理するしくみではないよ。')">工場の看板をきれいに保つしくみ</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, true, 'せいかい！ムダをなくすために、必要な部品を必要な量・タイミングで届けるしくみだよ。')">必要な部品を必要なとき・量だけ届けるしくみ</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, 'ロボットの制御システムではないよ。')">ロボットアームを動かすプログラム</button>
+      </div>
+      <div class="quiz-result"></div>
+    </div>
+
+    <div class="quiz-box" data-q="6">
+      <div class="quiz-q">⑥　日本の自動車の最大輸出先の国は？</div>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '中国には現地工場があるけど、最大輸出先ではないよ。')">中国</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, true, 'せいかい！アメリカは日本の自動車輸出の約40%を占める最大市場だよ。')">アメリカ</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, 'ドイツはヨーロッパの中心だけど、最大輸出先ではないよ。')">ドイツ</button>
+      </div>
+      <div class="quiz-result"></div>
+    </div>
+
+    <div class="quiz-box" data-q="7">
+      <div class="quiz-q">⑦　自動車専用の船を何という？</div>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, 'タンカーは石油を運ぶ船だよ。')">タンカー</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, 'コンテナ船はコンテナを積む船だよ。')">コンテナ船</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, true, 'せいかい！RORO船とも呼ばれ、1度に数千台の車を積んで世界へ運ぶ。')">自動車専用船（RORO船）</button>
+      </div>
+      <div class="quiz-result"></div>
+    </div>
+
+    <div class="quiz-box" data-q="8">
+      <div class="quiz-q">⑧　世界初の量産ハイブリッド車「プリウス」が発売されたのは何年？</div>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '1980年はまだハイブリッド車はなかったよ。')">1980年</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, true, 'せいかい！1997年、トヨタがプリウスを発売し、環境技術の歴史が変わった。')">1997年</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '2010年は電気自動車（日産リーフ）が出た年だよ。')">2010年</button>
+      </div>
+      <div class="quiz-result"></div>
+    </div>
+
+    <div class="quiz-box" data-q="9">
+      <div class="quiz-q">⑨　「燃料電池車（FCV）」が走るとき出てくるものは？</div>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, 'FCVは排気ガスを出さないよ。')">CO₂（二酸化炭素）</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, true, 'せいかい！水素と酸素が反応して電気を作り、排気されるのは水（H₂O）だけ！')">水（H₂O）</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '燃料電池車は黒煙を出さないよ。')">黒い煙</button>
+      </div>
+      <div class="quiz-result"></div>
+    </div>
+
+    <div class="quiz-box" data-q="10">
+      <div class="quiz-q">⑩　日本の輸出全体に占める自動車の割合はおよそ？</div>
+      <div class="quiz-options">
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '2%は少なすぎ。自動車は日本の輸出の柱だよ。')">約2%</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, true, 'せいかい！自動車は日本の輸出の約20%を占める最大の輸出品だよ。')">約20%</button>
+        <button class="quiz-btn" onclick="scoreQuiz(this, false, '80%は多すぎ。食料品や電子部品なども輸出しているよ。')">約80%</button>
+      </div>
+      <div class="quiz-result"></div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin:20px 0;">
+    <div class="score-display">スコア：<span id="score-val">0</span> / 10</div>
+    <div id="final-msg" class="final-msg">
+      <h3>🎉 全問チャレンジかんりょう！</h3>
+      <p id="final-comment">よくがんばったね！もう一度調べて、間違えた問題を復習しよう。</p>
+    </div>
+  </div>
+
+  <!-- 自分の考えを書こう -->
+  <h2 class="section-title">💬 自分の考えをまとめよう</h2>
+
+  <div class="think-box">
+    <h4>Q1. 自動車工場で働く人々は、どんな「くふう」をしていますか？</h4>
+    <p>調べたことをもとに、自分の言葉でまとめよう。</p>
+    <textarea data-key="think1" placeholder="例：工場では、カイゼンという考え方で毎日少しずつ改善を続けている。また…"></textarea>
+    <button class="memo-save" style="margin-top:6px;" onclick="saveMemo('think1', this)">メモをほぞんする</button>
+  </div>
+
+  <div class="think-box">
+    <h4>Q2. 自動車産業は、日本の社会とどのようにつながっていますか？</h4>
+    <p>部品メーカー・輸出・雇用などのつながりを考えてみよう。</p>
+    <textarea data-key="think2" placeholder="例：日本の輸出の約20%が自動車。全国の約4万社の工場が部品をつくっていて、多くの人々の仕事につながっている。"></textarea>
+    <button class="memo-save" style="margin-top:6px;" onclick="saveMemo('think2', this)">メモをほぞんする</button>
+  </div>
+
+  <div class="think-box">
+    <h4>Q3. これからの自動車づくりに、どんなことが大切だと思いますか？</h4>
+    <p>環境・技術・働く人の視点から考えよう。</p>
+    <textarea data-key="think3" placeholder="例：環境のことを考えて、EVや燃料電池車を増やすことが大切だと思う。でも充電スタンドを増やすことも必要で…"></textarea>
+    <button class="memo-save" style="margin-top:6px;" onclick="saveMemo('think3', this)">メモをほぞんする</button>
+  </div>
+
+  <!-- 学習完了 -->
+  <div style="text-align:center; margin-top:32px;">
+    <button onclick="markDone('matome'); this.textContent='✅ 全ページ学習かんりょう！'; this.style.background='#2e8b57';"
+      style="background:var(--blue); color:#fff; border:none; border-radius:30px; padding:14px 36px; font-size:1.05rem; font-weight:700; cursor:pointer; font-family:inherit;">
+      🏆 学習かんりょう！トップへ
+    </button>
+  </div>
+
+  <div style="margin-top:24px; text-align:center;">
+    <a href="../index.html" style="color:var(--blue); text-decoration:none; font-size:.9rem; font-weight:700;">← トップページにもどる</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>5年生 社会科「自動車づくりにはげむ人々」学習サイト</p>
+  <p style="margin-top:4px;">リンク先は外部サイトです。先生のしどうのもとで使用してください。</p>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+  let correctCount = 0;
+  let answeredCount = 0;
+  const totalQ = 10;
+
+  function scoreQuiz(btn, correct, msg) {
+    const box = btn.closest('.quiz-box');
+    if (box.dataset.answered) return;
+    box.dataset.answered = '1';
+    answeredCount++;
+    if (correct) correctCount++;
+
+    box.querySelectorAll('.quiz-btn').forEach(b => b.disabled = true);
+    btn.classList.add(correct ? 'correct' : 'wrong');
+    const result = box.querySelector('.quiz-result');
+    result.innerHTML = correct
+      ? `<span style="color:#2e8b57">✅ せいかい！　${msg}</span>`
+      : `<span style="color:#c0392b">❌ ざんねん…　${msg}</span>`;
+
+    document.getElementById('score-val').textContent = correctCount;
+
+    if (answeredCount === totalQ) {
+      const fm = document.getElementById('final-msg');
+      fm.style.display = 'block';
+      const fc = document.getElementById('final-comment');
+      if (correctCount === 10) {
+        fc.textContent = '🎊 全問せいかい！すばらしい！よく調べてくれたね！';
+      } else if (correctCount >= 7) {
+        fc.textContent = `${correctCount}問せいかい！とてもよくできたよ。まちがえた問題のページを見なおしてみよう。`;
+      } else {
+        fc.textContent = `${correctCount}問せいかい。もう一度それぞれのページで調べなおして、再チャレンジしてみよう！`;
+      }
+    }
+  }
+</script>
+</body>
+</html>

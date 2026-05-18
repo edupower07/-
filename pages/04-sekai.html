@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>④ 世界へとどく日本の車｜自動車づくりにはげむ人々</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .country-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .country-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px 8px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color .2s, transform .15s;
+    }
+    .country-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+    .country-card.active { border-color: var(--blue); background: var(--blue-lt); }
+    .country-flag { font-size: 2rem; margin-bottom: 4px; }
+    .country-name { font-size: .82rem; font-weight: 700; color: #333; }
+    .country-detail {
+      background: var(--blue-lt);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      border-left: 4px solid var(--blue);
+      display: none;
+    }
+    .country-detail.show { display: block; }
+    .country-detail h4 { font-size: .95rem; color: var(--blue); margin-bottom: 6px; }
+    .country-detail p { font-size: .88rem; color: #444; }
+
+    .export-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .export-country { min-width: 110px; font-size: .82rem; font-weight: 700; }
+    .export-bar-wrap { flex: 1; background: #e0e8f0; border-radius: 8px; height: 18px; overflow: hidden; }
+    .export-bar-fill { height: 100%; background: linear-gradient(90deg, var(--blue), #5ba8f5); border-radius: 8px; }
+    .export-pct { min-width: 40px; font-size: .8rem; color: var(--gray); text-align: right; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-icon">🌍</div>
+    <div class="header-title">
+      <h1>④ 世界へとどく日本の車</h1>
+      <p>自動車づくりにはげむ人々｜5年生 社会科</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html">🏠 トップ</a>
+    <a href="01-koutei.html">① 工程</a>
+    <a href="02-hito.html">② 人々のくふう</a>
+    <a href="03-buhin.html">③ 部品</a>
+    <a href="04-sekai.html" class="active">④ 世界へ</a>
+    <a href="05-kankyo.html">⑤ 環境</a>
+    <a href="06-matome.html">✅ まとめ</a>
+  </div>
+</nav>
+
+<main>
+
+  <div class="matome-box" style="margin-bottom:24px;">
+    <h3>🔍 このページで調べること</h3>
+    <ul>
+      <li>日本の自動車はどの国に輸出されているか</li>
+      <li>日本の自動車工業の規模（日本の輸出に占める割合）</li>
+      <li>海外に工場を建てている理由はなにか</li>
+      <li>輸出するときどのように運ぶか</li>
+    </ul>
+  </div>
+
+  <!-- インパクト数字 -->
+  <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap:14px; margin-bottom:24px;">
+    <div style="background:linear-gradient(135deg,#1a6fc4,#0d4a8f); color:#fff; border-radius:14px; padding:18px; text-align:center; box-shadow:var(--shadow);">
+      <div style="font-size:2rem; font-weight:900;">約500万台</div>
+      <div style="font-size:.82rem; margin-top:4px; opacity:.9;">日本からの自動車輸出台数（年間）</div>
+    </div>
+    <div style="background:linear-gradient(135deg,#c0392b,#861b12); color:#fff; border-radius:14px; padding:18px; text-align:center; box-shadow:var(--shadow);">
+      <div style="font-size:2rem; font-weight:900;">約20%</div>
+      <div style="font-size:.82rem; margin-top:4px; opacity:.9;">日本の輸出額に占める自動車の割合</div>
+    </div>
+    <div style="background:linear-gradient(135deg,#2e8b57,#1a5c38); color:#fff; border-radius:14px; padding:18px; text-align:center; box-shadow:var(--shadow);">
+      <div style="font-size:2rem; font-weight:900;">170以上</div>
+      <div style="font-size:.82rem; margin-top:4px; opacity:.9;">日本の自動車が輸出される国と地域の数</div>
+    </div>
+  </div>
+
+  <!-- 動画 -->
+  <h2 class="section-title">🎬 動画で見よう</h2>
+
+  <div class="video-grid">
+    <div class="video-item">
+      <h4>🚢 自動車専用船で世界へ！</h4>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/OAxfJj3rMuc"
+          title="自動車専用船 輸出"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-caption">自動車専用船（RORO船）で数千台を一度に運ぶ様子</p>
+    </div>
+
+    <div class="video-item">
+      <h4>🌍 日産の海外工場・グローバル生産</h4>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/VJv7M5N9l_Q"
+          title="日産 グローバル生産"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-caption">出典：Nissan Motor 公式YouTube</p>
+    </div>
+  </div>
+
+  <!-- 輸出先グラフ -->
+  <h2 class="section-title">📊 どの国に輸出？（輸出台数の割合）</h2>
+
+  <div style="background:#fff; border-radius:14px; padding:20px; box-shadow:var(--shadow); margin-bottom:20px;">
+    <p style="font-size:.82rem; color:#888; margin-bottom:14px;">※ おおよその割合（JAMA統計をもとに作成）</p>
+
+    <div class="export-bar">
+      <span class="export-country">🇺🇸 アメリカ</span>
+      <div class="export-bar-wrap"><div class="export-bar-fill" style="width:38%"></div></div>
+      <span class="export-pct">約38%</span>
+    </div>
+    <div class="export-bar">
+      <span class="export-country">🇪🇺 ヨーロッパ</span>
+      <div class="export-bar-wrap"><div class="export-bar-fill" style="width:18%"></div></div>
+      <span class="export-pct">約18%</span>
+    </div>
+    <div class="export-bar">
+      <span class="export-country">🇦🇺 オーストラリア</span>
+      <div class="export-bar-wrap"><div class="export-bar-fill" style="width:10%"></div></div>
+      <span class="export-pct">約10%</span>
+    </div>
+    <div class="export-bar">
+      <span class="export-country">🌏 アジア</span>
+      <div class="export-bar-wrap"><div class="export-bar-fill" style="width:15%"></div></div>
+      <span class="export-pct">約15%</span>
+    </div>
+    <div class="export-bar">
+      <span class="export-country">🌍 中東・他</span>
+      <div class="export-bar-wrap"><div class="export-bar-fill" style="width:19%"></div></div>
+      <span class="export-pct">約19%</span>
+    </div>
+
+    <p style="font-size:.78rem; color:#999; margin-top:12px;">出典：日本自動車工業会（JAMA）統計をもとに編集</p>
+  </div>
+
+  <!-- 国クリック -->
+  <h2 class="section-title">🗺 輸出先の国をクリックして調べよう</h2>
+
+  <div class="country-grid">
+    <div class="country-card" onclick="showCountry('us')">
+      <div class="country-flag">🇺🇸</div>
+      <div class="country-name">アメリカ</div>
+    </div>
+    <div class="country-card" onclick="showCountry('eu')">
+      <div class="country-flag">🇩🇪</div>
+      <div class="country-name">ヨーロッパ</div>
+    </div>
+    <div class="country-card" onclick="showCountry('au')">
+      <div class="country-flag">🇦🇺</div>
+      <div class="country-name">オーストラリア</div>
+    </div>
+    <div class="country-card" onclick="showCountry('cn')">
+      <div class="country-flag">🇨🇳</div>
+      <div class="country-name">中国</div>
+    </div>
+    <div class="country-card" onclick="showCountry('th')">
+      <div class="country-flag">🇹🇭</div>
+      <div class="country-name">タイ</div>
+    </div>
+    <div class="country-card" onclick="showCountry('me')">
+      <div class="country-flag">🌍</div>
+      <div class="country-name">中東・アフリカ</div>
+    </div>
+  </div>
+
+  <div id="c-us" class="country-detail">
+    <h4>🇺🇸 アメリカ（最大の輸出先）</h4>
+    <p>日本の自動車輸出先として最も大きい国。トヨタ・ホンダ・日産はアメリカにも工場を持ち、
+    現地でも生産している。「現地生産」は貿易摩擦を減らすためでもある。</p>
+  </div>
+  <div id="c-eu" class="country-detail">
+    <h4>🇩🇪 ヨーロッパ</h4>
+    <p>ドイツ・イギリス・フランスなどへ輸出。ヨーロッパではEV（電気自動車）の普及が早く、
+    日本メーカーも電動化を急いでいる。環境規制が厳しいため、燃費の良い日本車が人気。</p>
+  </div>
+  <div id="c-au" class="country-detail">
+    <h4>🇦🇺 オーストラリア</h4>
+    <p>右ハンドル（日本と同じ）の国なので、日本車がそのまま輸出できる。
+    トヨタやマツダのSUVや4WD車が人気。広大な土地を走るための車需要が高い。</p>
+  </div>
+  <div id="c-cn" class="country-detail">
+    <h4>🇨🇳 中国</h4>
+    <p>世界最大の自動車市場。日本メーカーは中国国内にも多くの工場を持っている。
+    近年は中国産EVが急速に普及し、競争が激しくなっている。</p>
+  </div>
+  <div id="c-th" class="country-detail">
+    <h4>🇹🇭 タイ</h4>
+    <p>東南アジアでの自動車生産の拠点。「アジアのデトロイト」とも呼ばれる。
+    日本メーカーがタイに工場を置き、アジア各国へ輸出している。</p>
+  </div>
+  <div id="c-me" class="country-detail">
+    <h4>🌍 中東・アフリカ</h4>
+    <p>砂漠や悪路でも走れる丈夫な日本車が人気。特にトヨタのランドクルーザーは
+    砂漠地帯や紛争地域でも使われるほど信頼されている。</p>
+  </div>
+
+  <!-- 外部リソース -->
+  <h2 class="section-title">🔗 もっと調べよう</h2>
+
+  <div class="resource-card">
+    <a href="https://www.jama.or.jp/statistics/exports/" target="_blank" rel="noopener">
+      <div class="resource-badge badge-jama"><span class="badge-icon">📊</span>JAMA</div>
+      <div class="resource-info">
+        <strong>日本自動車工業会 輸出統計データ</strong>
+        <small>実際の輸出台数・輸出先のデータをグラフで確認できる。最新の数字を調べてみよう。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="resource-card">
+    <a href="https://www.nhk.or.jp/school/search/?keyword=%E8%87%AA%E5%8B%95%E8%BB%8A+%E8%BC%B8%E5%87%BA" target="_blank" rel="noopener">
+      <div class="resource-badge badge-nhk"><span class="badge-icon">📺</span>NHK</div>
+      <div class="resource-info">
+        <strong>NHK for School「自動車 輸出」で検索</strong>
+        <small>自動車の輸出・貿易についての動画クリップを探してみよう。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="resource-card">
+    <a href="https://www.nissan-global.com/JP/COMPANY/PROFILE/WORLDWIDE/" target="_blank" rel="noopener">
+      <div class="resource-badge badge-nissan"><span class="badge-icon">🌍</span>日産</div>
+      <div class="resource-info">
+        <strong>日産 世界の事業拠点マップ</strong>
+        <small>日産の工場・販売会社が世界のどこにあるかを地図で確認できる。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <!-- クイズ -->
+  <h2 class="section-title">🧠 クイズにチャレンジ！</h2>
+
+  <div class="quiz-box">
+    <div class="quiz-q">日本の自動車輸出で、最も多い輸出先の国はどこ？</div>
+    <div class="quiz-options">
+      <button class="quiz-btn" onclick="answerQuiz(this, false, '中国は大きな市場だけど、最大の輸出先は別の国だよ。')">中国</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, true, 'せいかい！アメリカが日本の自動車の最大輸出先だよ。約40%がアメリカ向けだ。')">アメリカ</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, false, 'ドイツはヨーロッパだけど、そのヨーロッパ全体でもアメリカより少ないよ。')">ドイツ</button>
+    </div>
+    <div class="quiz-result"></div>
+  </div>
+
+  <div class="quiz-box">
+    <div class="quiz-q">日本の自動車メーカーが外国に工場をつくる理由として正しいものは？</div>
+    <div class="quiz-options">
+      <button class="quiz-btn" onclick="answerQuiz(this, false, '日本の土地不足は理由のひとつだけど、最大の理由ではないよ。')">日本に工場を建てる土地がないから</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, true, 'せいかい！現地で生産することで、輸送コストの節約・関税の回避・雇用の創出ができ、現地のニーズに合わせた車もつくれる。')">輸送コストを減らし、現地のニーズに合わせた車をつくるため</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, false, '日本の技術者が海外に行きたいからではないよ。')">日本の技術者が海外で働きたいから</button>
+    </div>
+    <div class="quiz-result"></div>
+  </div>
+
+  <!-- メモ欄 -->
+  <h2 class="section-title">📝 調べたことをメモしよう</h2>
+  <div class="memo-box">
+    <label>日本の車が世界へとどくことについて、気づいたこと・考えたことを書こう</label>
+    <textarea data-key="sekai" placeholder="例：アメリカに約40%も輸出しているのに、現地でも工場をつくっているのはなぜだろう？"></textarea>
+    <button class="memo-save" onclick="saveMemo('sekai', this)">メモをほぞんする</button>
+  </div>
+
+  <!-- 学習完了 -->
+  <div style="text-align:center; margin-top:28px;">
+    <button onclick="markDone('sekai'); this.textContent='✅ 学習かんりょう！'; this.style.background='#2e8b57';"
+      style="background:var(--blue); color:#fff; border:none; border-radius:30px; padding:12px 32px; font-size:1rem; font-weight:700; cursor:pointer; font-family:inherit;">
+      ✅ このページの学習かんりょう！
+    </button>
+  </div>
+
+  <div style="margin-top:24px; display:flex; gap:12px; justify-content:space-between;">
+    <a href="03-buhin.html" style="color:var(--blue); text-decoration:none; font-size:.9rem;">← ③ 部品にもどる</a>
+    <a href="05-kankyo.html" style="color:var(--blue); text-decoration:none; font-size:.9rem; font-weight:700;">⑤ 環境にやさしい車づくりへ →</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>5年生 社会科「自動車づくりにはげむ人々」学習サイト</p>
+  <p style="margin-top:4px;">リンク先は外部サイトです。先生のしどうのもとで使用してください。</p>
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+function showCountry(code) {
+  document.querySelectorAll('.country-card').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.country-detail').forEach(d => d.classList.remove('show'));
+  event.currentTarget.classList.add('active');
+  const el = document.getElementById('c-' + code);
+  if (el) el.classList.add('show');
+}
+</script>
+</body>
+</html>

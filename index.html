@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自動車づくりにはげむ人々｜5年社会科 学習サイト</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .top-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .top-nav-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.10);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .top-nav-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,.15);
+    }
+
+    .top-nav-card .card-top {
+      padding: 22px 18px 14px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .card-top .num {
+      font-size: 1.4rem;
+      font-weight: 900;
+      opacity: .6;
+      min-width: 30px;
+    }
+
+    .card-top .icon { font-size: 2.2rem; }
+
+    .card-top .title-wrap h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .card-top .title-wrap small {
+      font-size: .78rem;
+      opacity: .85;
+    }
+
+    .top-nav-card .card-bottom {
+      padding: 12px 18px 16px;
+      font-size: .83rem;
+      color: #555;
+      flex: 1;
+    }
+
+    .card-bottom ul {
+      padding-left: 1.2em;
+      margin-top: 4px;
+    }
+
+    .card-bottom li { margin-bottom: 2px; }
+
+    .bg1 { background: linear-gradient(135deg, #1a6fc4, #0d4a8f); }
+    .bg2 { background: linear-gradient(135deg, #2e8b57, #1a5c38); }
+    .bg3 { background: linear-gradient(135deg, #7b5ea7, #4a3070); }
+    .bg4 { background: linear-gradient(135deg, #c0392b, #861b12); }
+    .bg5 { background: linear-gradient(135deg, #e07b00, #a05000); }
+
+    .start-badge {
+      display: inline-block;
+      background: var(--blue);
+      color: #fff;
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: .75rem;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .how-to-box {
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
+    }
+
+    .how-to-box h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .how-steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .how-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      flex: 1;
+      min-width: 160px;
+    }
+
+    .how-step-num {
+      background: var(--blue);
+      color: #fff;
+      font-weight: 700;
+      border-radius: 50%;
+      width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem;
+      flex-shrink: 0;
+    }
+
+    .how-step-text {
+      font-size: .85rem;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-icon">🚗</div>
+    <div class="header-title">
+      <h1>自動車づくりにはげむ人々</h1>
+      <p>5年生 社会科 ｜ 調べ学習サイト</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html">🏠 トップ</a>
+    <a href="pages/01-koutei.html">① 工程</a>
+    <a href="pages/02-hito.html">② 人々のくふう</a>
+    <a href="pages/03-buhin.html">③ 部品</a>
+    <a href="pages/04-sekai.html">④ 世界へ</a>
+    <a href="pages/05-kankyo.html">⑤ 環境</a>
+    <a href="pages/06-matome.html">✅ まとめ</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ヒーロー -->
+  <div class="hero">
+    <h2>🚗 調べ学習をはじめよう！</h2>
+    <p>動画やサイトを使って、自動車づくりの「なぜ？」「どうやって？」を調べてみよう。<br>
+    わかったことは、メモ欄に書きながら進めてね。</p>
+  </div>
+
+  <!-- 使い方 -->
+  <div class="how-to-box">
+    <h3>📋 このサイトの使い方</h3>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-step-text">下のカードから調べたいテーマを選ぼう</div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-step-text">動画・ウェブサイトで調べてみよう</div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-step-text">気づいたことをメモ欄に書こう</div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">4</div>
+        <div class="how-step-text">まとめのページでクイズに挑戦！</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 学習進捗 -->
+  <div style="background:#fff; border-radius:12px; padding:16px 18px; box-shadow:var(--shadow); margin-bottom:28px;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+      <strong style="font-size:.9rem;">📊 学習しんちょく</strong>
+      <span id="progress-label" style="font-size:.82rem; color:var(--gray);">0 / 5 ページ 学習ずみ</span>
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar" id="progress-bar" style="width:0%"></div>
+    </div>
+    <p style="font-size:.78rem; color:#888;">各ページの「学習かんりょう！」ボタンを押すと記録されるよ</p>
+  </div>
+
+  <!-- テーマカード -->
+  <h2 class="section-title">テーマを選んで調べよう</h2>
+
+  <div class="top-nav-grid">
+
+    <a href="pages/01-koutei.html" class="top-nav-card">
+      <div class="card-top bg1">
+        <span class="num">①</span>
+        <span class="icon">🏭</span>
+        <div class="title-wrap">
+          <h3>じどうしゃが<br>できるまで</h3>
+          <small>生産工程・ラインのながれ</small>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <ul>
+          <li>プレス・ようせつ・とそう・くみたて</li>
+          <li>NHK for School 動画</li>
+          <li>日産・トヨタ 工場見学</li>
+        </ul>
+        <span class="start-badge">▶ 調べる</span>
+      </div>
+    </a>
+
+    <a href="pages/02-hito.html" class="top-nav-card">
+      <div class="card-top bg2">
+        <span class="num">②</span>
+        <span class="icon">👷</span>
+        <div class="title-wrap">
+          <h3>はたらく人々の<br>くふうと努力</h3>
+          <small>カイゼン・チームワーク</small>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <ul>
+          <li>カイゼン・カンバンとは？</li>
+          <li>ロボットと人の協力</li>
+          <li>安全・品質へのこだわり</li>
+        </ul>
+        <span class="start-badge">▶ 調べる</span>
+      </div>
+    </a>
+
+    <a href="pages/03-buhin.html" class="top-nav-card">
+      <div class="card-top bg3">
+        <span class="num">③</span>
+        <span class="icon">⚙️</span>
+        <div class="title-wrap">
+          <h3>部品はどこから？</h3>
+          <small>原材料・サプライチェーン</small>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <ul>
+          <li>3万点の部品のひみつ</li>
+          <li>関連工場・仕入れ先マップ</li>
+          <li>カンバン方式のしくみ</li>
+        </ul>
+        <span class="start-badge">▶ 調べる</span>
+      </div>
+    </a>
+
+    <a href="pages/04-sekai.html" class="top-nav-card">
+      <div class="card-top bg4">
+        <span class="num">④</span>
+        <span class="icon">🌍</span>
+        <div class="title-wrap">
+          <h3>世界へとどく<br>日本の車</h3>
+          <small>輸出・貿易・グローバル</small>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <ul>
+          <li>どの国に輸出？グラフで見る</li>
+          <li>船・トラックでの輸送</li>
+          <li>海外工場のひろがり</li>
+        </ul>
+        <span class="start-badge">▶ 調べる</span>
+      </div>
+    </a>
+
+    <a href="pages/05-kankyo.html" class="top-nav-card">
+      <div class="card-top bg5">
+        <span class="num">⑤</span>
+        <span class="icon">🌱</span>
+        <div class="title-wrap">
+          <h3>かんきょうに<br>やさしい車づくり</h3>
+          <small>EV・SDGs・技術の進化</small>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <ul>
+          <li>ハイブリッド・電気自動車</li>
+          <li>リサイクル・工場の環境対策</li>
+          <li>未来の車を想像しよう</li>
+        </ul>
+        <span class="start-badge">▶ 調べる</span>
+      </div>
+    </a>
+
+    <a href="pages/06-matome.html" class="top-nav-card">
+      <div class="card-top" style="background:linear-gradient(135deg,#555,#222);">
+        <span class="num">✅</span>
+        <span class="icon">📝</span>
+        <div class="title-wrap">
+          <h3>まとめ・クイズ</h3>
+          <small>学習のふりかえり</small>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <ul>
+          <li>学んだことをまとめよう</li>
+          <li>○×クイズ・選択問題</li>
+          <li>「自分の考え」を書こう</li>
+        </ul>
+        <span class="start-badge">▶ チャレンジ</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- おすすめリンク集 -->
+  <h2 class="section-title">📚 使えるサイト・動画一覧</h2>
+  <div class="note-box">
+    <strong>つかい方：</strong>　リンクをクリックすると、べつのタブで開きます。見おわったらこのページにもどってね。
+  </div>
+
+  <div class="resource-card">
+    <a href="https://www.nhk.or.jp/school/syakai/" target="_blank" rel="noopener">
+      <div class="resource-badge badge-nhk"><span class="badge-icon">📺</span>NHK for School</div>
+      <div class="resource-info">
+        <strong>NHK for School「社会」5年生</strong>
+        <small>工業生産に関する動画クリップがたくさん。「自動車」で検索してみよう。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="resource-card">
+    <a href="https://www.nissan-global.com/JP/DOCUMENT/PDF/CSR/EDUCATION/2024/all.pdf" target="_blank" rel="noopener">
+      <div class="resource-badge badge-nissan"><span class="badge-icon">🔴</span>日産</div>
+      <div class="resource-info">
+        <strong>日産自動車 学習用資料（社会科副読本）</strong>
+        <small>日産が作った学習用の副読本。工場のしくみや環境への取り組みが分かる。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="resource-card">
+    <a href="https://www.toyota.co.jp/jpn/kids/" target="_blank" rel="noopener">
+      <div class="resource-badge badge-toyota"><span class="badge-icon">🔴</span>トヨタ</div>
+      <div class="resource-info">
+        <strong>トヨタキッズ（Toyota Kids）</strong>
+        <small>トヨタ公式のこども向けサイト。車づくりのひみつや環境の取り組みが楽しく学べる。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="resource-card">
+    <a href="https://www.jama.or.jp/kids/" target="_blank" rel="noopener">
+      <div class="resource-badge badge-jama"><span class="badge-icon">🚘</span>JAMA</div>
+      <div class="resource-info">
+        <strong>日本自動車工業会「キッズ自動車館」</strong>
+        <small>日本の自動車産業全体についてのデータや歴史が分かる。クイズもあり。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <p>5年生 社会科「自動車づくりにはげむ人々」学習サイト</p>
+  <p style="margin-top:4px;">リンク先は外部サイトです。先生のしどうのもとで使用してください。</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
