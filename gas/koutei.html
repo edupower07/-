@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>① じどうしゃができるまで｜自動車づくりにはげむ人々</title>
+  <?!= include('stylesheet'); ?>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-icon">🏭</div>
+    <div class="header-title">
+      <h1>① じどうしゃができるまで</h1>
+      <p>自動車づくりにはげむ人々｜5年生 社会科</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="?page=index" target="_top">🏠 トップ</a>
+    <a href="?page=koutei" target="_top" class="active">① 工程</a>
+    <a href="?page=hito" target="_top">② 人々のくふう</a>
+    <a href="?page=buhin" target="_top">③ 部品</a>
+    <a href="?page=sekai" target="_top">④ 世界へ</a>
+    <a href="?page=kankyo" target="_top">⑤ 環境</a>
+    <a href="?page=matome" target="_top">✅ まとめ</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 調べる視点 -->
+  <div class="matome-box" style="margin-bottom:24px;">
+    <h3>🔍 このページで調べること</h3>
+    <ul>
+      <li>自動車はどんな工程を経てつくられているか</li>
+      <li>各工程でどんな機械や人が働いているか</li>
+      <li>1台の車ができるまでに何人の人がかかわっているか</li>
+    </ul>
+  </div>
+
+  <!-- NHK for School -->
+  <h2 class="section-title">📺 まず動画で確認しよう（NHK for School）</h2>
+
+  <div class="note-box">
+    <strong>先生より：</strong>　NHK for School のサイトで「自動車 工場」と検索してみよう。以下の動画もあわせて見てね。
+  </div>
+
+  <!-- NHK for School リンクカード -->
+  <div class="resource-card" style="margin-bottom:12px;">
+    <a href="https://www.nhk.or.jp/school/syakai/shakai-matome/article/article_24.html" target="_blank" rel="noopener">
+      <div class="resource-badge badge-nhk"><span class="badge-icon">📺</span>NHK<br>for School</div>
+      <div class="resource-info">
+        <strong>社会のまとめ「日本の工業生産」（NHK for School）</strong>
+        <small>工業生産のしくみや工場の工夫について動画と図でわかりやすく解説。まずここから見よう！</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="resource-card" style="margin-bottom:24px;">
+    <a href="https://www.nhk.or.jp/school/search/?keyword=%E8%87%AA%E5%8B%95%E8%BB%8A+%E5%B7%A5%E5%A0%B4&type=movie" target="_blank" rel="noopener">
+      <div class="resource-badge badge-nhk"><span class="badge-icon">🔍</span>NHK<br>検索</div>
+      <div class="resource-info">
+        <strong>NHK for School「自動車 工場」で動画を検索</strong>
+        <small>工場内の映像・働く人々の動画が多数。「プレス」「溶接」「組み立て」などで検索してみよう。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <!-- YouTube 動画（トヨタ公式） -->
+  <h2 class="section-title">🎬 動画で見る！工場のながれ</h2>
+
+  <div class="video-grid">
+    <div class="video-item">
+      <h4>🏭 トヨタ工場のしくみ（トヨタ公式）</h4>
+      <div class="video-wrap">
+        <!-- Toyota official factory tour video -->
+        <iframe
+          src="https://www.youtube.com/embed/5aKNu7fJdTI"
+          title="トヨタ自動車 工場見学"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-caption">出典：Toyota Motor Corporation 公式YouTube</p>
+    </div>
+
+    <div class="video-item">
+      <h4>🔩 日産 工場のロボットと人の協力</h4>
+      <div class="video-wrap">
+        <!-- Nissan factory official video -->
+        <iframe
+          src="https://www.youtube.com/embed/xzBzHNJP4LI"
+          title="日産自動車工場"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-caption">出典：Nissan Motor 公式YouTube</p>
+    </div>
+  </div>
+
+  <!-- 工程インタラクティブ -->
+  <h2 class="section-title">📋 工程をクリックして調べよう</h2>
+  <p style="font-size:.88rem; color:#555; margin-bottom:14px;">各工程をクリックすると、くわしい説明が出てくるよ。</p>
+
+  <div class="steps">
+    <div class="step" onclick="toggleStep('d1')">
+      <div class="step-num">1</div>
+      <div class="step-icon">🔨</div>
+      <div class="step-name">プレス</div>
+    </div>
+    <div class="step" onclick="toggleStep('d2')">
+      <div class="step-num">2</div>
+      <div class="step-icon">⚡</div>
+      <div class="step-name">ようせつ</div>
+    </div>
+    <div class="step" onclick="toggleStep('d3')">
+      <div class="step-num">3</div>
+      <div class="step-icon">🎨</div>
+      <div class="step-name">とそう</div>
+    </div>
+    <div class="step" onclick="toggleStep('d4')">
+      <div class="step-num">4</div>
+      <div class="step-icon">🔧</div>
+      <div class="step-name">くみたて</div>
+    </div>
+    <div class="step" onclick="toggleStep('d5')">
+      <div class="step-num">5</div>
+      <div class="step-icon">🔍</div>
+      <div class="step-name">けんさ</div>
+    </div>
+  </div>
+
+  <div id="d1" class="step-detail">
+    <h4>① プレス（Press）</h4>
+    <p>大きな鉄の板（鋼板）を、強い力でプレス機にはさんでドアやボンネットの形にうちぬく工程。
+    1000トン以上の力で一瞬でくり抜く機械を使う。切り取ったあとの鉄くずはリサイクルされる。</p>
+  </div>
+
+  <div id="d2" class="step-detail">
+    <h4>② 溶接（Welding）</h4>
+    <p>プレスされたパーツを電気の熱でとかしてくっつける工程。1台の車には約4,000か所もの溶接がある。
+    ほとんどがロボットアームで行われるが、細かい部分は人が確認する。スパークが激しく飛ぶ。</p>
+  </div>
+
+  <div id="d3" class="step-detail">
+    <h4>③ 塗装（Painting）</h4>
+    <p>ボディをさびから守るために特殊な塗料でおおう工程。まず「電着塗装」でさび止めをし、
+    その後カラー塗装（白・黒・赤など）を行う。塗料のにおいや有害物質を外に出さない空気管理も大切。</p>
+  </div>
+
+  <div id="d4" class="step-detail">
+    <h4>④ 組み立て（Assembly）</h4>
+    <p>ドア・エンジン・シート・ガラス・タイヤなどの部品をボディにとりつけていく工程。
+    3万点もの部品を順番に取り付ける。1台分の部品は必要なタイミングで届くよう、
+    カンバン方式で管理されている。</p>
+  </div>
+
+  <div id="d5" class="step-detail">
+    <h4>⑤ 検査（Inspection）</h4>
+    <p>完成した車が安全・正確に動くかどうかを細かくチェックする工程。
+    エンジン・ブレーキ・ライト・ハンドルのすべてをテスト。人の目と機械の両方で確認し、
+    合格した車だけが出荷される。</p>
+  </div>
+
+  <!-- 外部リソース -->
+  <h2 class="section-title">🔗 もっと調べよう（外部サイト）</h2>
+
+  <div class="resource-card">
+    <a href="https://www.toyota.co.jp/jpn/company/facilities/plant/" target="_blank" rel="noopener">
+      <div class="resource-badge badge-toyota"><span class="badge-icon">🏭</span>トヨタ</div>
+      <div class="resource-info">
+        <strong>トヨタ 工場・施設のご紹介</strong>
+        <small>日本各地にあるトヨタの工場を確認できる。どの工場で何をつくっているか調べてみよう。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="resource-card">
+    <a href="https://www.nissan-global.com/JP/COMPANY/FACILITIES/" target="_blank" rel="noopener">
+      <div class="resource-badge badge-nissan"><span class="badge-icon">🏭</span>日産</div>
+      <div class="resource-info">
+        <strong>日産 工場・施設案内</strong>
+        <small>日産の工場がどこにあるか、バーチャル見学ができるコンテンツも。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <!-- クイズ -->
+  <h2 class="section-title">🧠 クイズにチャレンジ！</h2>
+
+  <div class="quiz-box">
+    <div class="quiz-q">自動車の工場では、最初にどの工程をおこなうでしょう？</div>
+    <div class="quiz-options">
+      <button class="quiz-btn" onclick="answerQuiz(this, false, '塗装は3番目の工程だよ。')">🎨 塗装</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, true, 'せいかい！鉄板をプレスして形を作るところから始まるよ。')">🔨 プレス</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, false, '組み立ては4番目の工程だよ。')">🔧 組み立て</button>
+    </div>
+    <div class="quiz-result"></div>
+  </div>
+
+  <div class="quiz-box">
+    <div class="quiz-q">1台の自動車は、だいたい何点の部品でできているでしょう？</div>
+    <div class="quiz-options">
+      <button class="quiz-btn" onclick="answerQuiz(this, false, 'もっとたくさんの部品が使われているよ。')">約300点</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, false, 'まだまだ多いよ！')">約3,000点</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, true, 'せいかい！なんと約3万点もの部品を組み立ててつくられているんだ。')">約3万点</button>
+    </div>
+    <div class="quiz-result"></div>
+  </div>
+
+  <!-- メモ欄 -->
+  <h2 class="section-title">📝 調べたことをメモしよう</h2>
+  <div class="memo-box">
+    <label>工場の工程で「気づいたこと・疑問に思ったこと」を書こう</label>
+    <textarea data-key="koutei" placeholder="例：ロボットがほとんどの溶接をしているのは、なぜだろう？"></textarea>
+    <button class="memo-save" onclick="saveMemo('koutei', this)">メモをほぞんする</button>
+  </div>
+
+  <!-- 学習完了ボタン -->
+  <div style="text-align:center; margin-top:28px;">
+    <button onclick="markDone('koutei'); this.textContent='✅ 学習かんりょう！'; this.style.background='#2e8b57';"
+      style="background:var(--blue); color:#fff; border:none; border-radius:30px; padding:12px 32px; font-size:1rem; font-weight:700; cursor:pointer; font-family:inherit;">
+      ✅ このページの学習かんりょう！
+    </button>
+  </div>
+
+  <div style="margin-top:24px; display:flex; gap:12px; justify-content:space-between;">
+    <a href="?page=index" target="_top" style="color:var(--blue); text-decoration:none; font-size:.9rem;">← トップにもどる</a>
+    <a href="?page=hito" target="_top" style="color:var(--blue); text-decoration:none; font-size:.9rem; font-weight:700;">② はたらく人々のくふうへ →</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>5年生 社会科「自動車づくりにはげむ人々」学習サイト</p>
+  <p style="margin-top:4px;">リンク先は外部サイトです。先生のしどうのもとで使用してください。</p>
+</footer>
+
+<?!= include('javascript'); ?>
+</body>
+</html>

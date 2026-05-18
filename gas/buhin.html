@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>③ 部品はどこから？｜自動車づくりにはげむ人々</title>
+  <?!= include('stylesheet'); ?>
+  <style>
+    .map-label {
+      font-size:.78rem; padding:4px 8px; border-radius:6px;
+      display:inline-block; margin:3px; font-weight:700;
+    }
+    .stat-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      font-size: .9rem;
+    }
+    .stat-label { min-width: 100px; font-weight: 700; color: #333; }
+    .stat-bar-wrap { flex: 1; background: #e0e8f0; border-radius: 10px; height: 14px; overflow: hidden; }
+    .stat-bar { height: 100%; background: var(--blue); border-radius: 10px; }
+    .stat-val { min-width: 40px; text-align: right; font-size: .82rem; color: var(--gray); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-icon">⚙️</div>
+    <div class="header-title">
+      <h1>③ 部品はどこから？</h1>
+      <p>自動車づくりにはげむ人々｜5年生 社会科</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="?page=index" target="_top">🏠 トップ</a>
+    <a href="?page=koutei" target="_top">① 工程</a>
+    <a href="?page=hito" target="_top">② 人々のくふう</a>
+    <a href="?page=buhin" target="_top" class="active">③ 部品</a>
+    <a href="?page=sekai" target="_top">④ 世界へ</a>
+    <a href="?page=kankyo" target="_top">⑤ 環境</a>
+    <a href="?page=matome" target="_top">✅ まとめ</a>
+  </div>
+</nav>
+
+<main>
+
+  <div class="matome-box" style="margin-bottom:24px;">
+    <h3>🔍 このページで調べること</h3>
+    <ul>
+      <li>1台の車には何点の部品が使われているか</li>
+      <li>部品はどこで・どんな会社がつくっているか</li>
+      <li>関連工場はどこにあるか（地図で確認）</li>
+      <li>材料はどこから来るか（鉄・アルミ・ゴムなど）</li>
+    </ul>
+  </div>
+
+  <!-- 3万点インパクト -->
+  <h2 class="section-title">🤯 「3万点」ってどのくらい多い？</h2>
+
+  <div style="background:linear-gradient(135deg,#1a6fc4,#0d4a8f); color:#fff; border-radius:14px; padding:24px; text-align:center; margin-bottom:20px; box-shadow:var(--shadow);">
+    <div style="font-size:3rem; font-weight:900; letter-spacing:2px;">30,000</div>
+    <div style="font-size:1.1rem; margin-top:4px; opacity:.9;">1台の自動車に使われる部品の数</div>
+    <div style="font-size:.85rem; margin-top:12px; opacity:.8;">
+      ✈ 飛行機（約600万点）よりは少ないが、スマートフォン（約1,000点）の<strong>30倍</strong>。<br>
+      もし1秒に1つ数えたとしたら、<strong>約8時間以上</strong>かかる量。
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <div class="card card-blue">
+      <div class="card-header">🔩 主な部品の例</div>
+      <div class="card-body">
+        <p>エンジン・タイヤ・ドア・窓ガラス・シート・ランプ・ブレーキ・カーナビ・エアバッグ…</p>
+        <p>これらの部品は、それぞれ専門の<strong>関連企業（サプライヤー）</strong>がつくる。</p>
+      </div>
+    </div>
+    <div class="card card-orange">
+      <div class="card-header">🏭 部品をつくる会社は？</div>
+      <div class="card-body">
+        <p>トヨタだけで、日本国内の<strong>約4万社</strong>の関連企業から部品を仕入れている。</p>
+        <p>大企業から家族経営の町工場まで、さまざまな会社がかかわっている。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 動画 -->
+  <h2 class="section-title">🎬 動画で見よう</h2>
+
+  <div class="video-grid">
+    <div class="video-item">
+      <h4>🔩 部品メーカーと自動車工場のつながり</h4>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/ERfEBdBFoHE"
+          title="自動車部品サプライチェーン"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-caption">出典：YouTube（自動車産業関連）</p>
+    </div>
+
+    <div class="video-item">
+      <h4>🗾 日本の自動車産業マップ</h4>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/E9cKcEP1FfI"
+          title="日本 自動車産業 地域"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-caption">出典：YouTube</p>
+    </div>
+  </div>
+
+  <!-- 産地マップ -->
+  <h2 class="section-title">🗾 部品の産地・関連工場はどこ？</h2>
+
+  <div class="note-box">
+    <strong>調べよう：</strong>　地図帳を使って、下の地名を確認してみよう。なぜその地域に集まっているか考えてみよう。
+  </div>
+
+  <div style="background:#fff; border-radius:14px; padding:20px; box-shadow:var(--shadow); margin-bottom:20px;">
+    <p style="font-size:.88rem; font-weight:700; color:#333; margin-bottom:14px;">🏭 主な自動車関連工場のある地域</p>
+
+    <div class="stat-row">
+      <span class="stat-label">愛知県</span>
+      <div class="stat-bar-wrap"><div class="stat-bar" style="width:95%"></div></div>
+      <span class="stat-val">最大拠点</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">神奈川県</span>
+      <div class="stat-bar-wrap"><div class="stat-bar" style="width:70%"></div></div>
+      <span class="stat-val">日産本社</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">静岡県</span>
+      <div class="stat-bar-wrap"><div class="stat-bar" style="width:65%"></div></div>
+      <span class="stat-val">部品多数</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">群馬県</span>
+      <div class="stat-bar-wrap"><div class="stat-bar" style="width:55%"></div></div>
+      <span class="stat-val">スバル本社</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">広島県</span>
+      <div class="stat-bar-wrap"><div class="stat-bar" style="width:50%"></div></div>
+      <span class="stat-val">マツダ本社</span>
+    </div>
+
+    <div style="margin-top:14px;">
+      <p style="font-size:.82rem; color:#555;">
+        <span class="map-label" style="background:#e8f2fb; color:#1a6fc4;">鉄・アルミ</span>
+        北九州・神戸・千葉（製鉄所が多い）
+      </p>
+      <p style="font-size:.82rem; color:#555;">
+        <span class="map-label" style="background:#e8f5e9; color:#2e8b57;">ゴム（タイヤ）</span>
+        神奈川・栃木（ブリヂストン・横浜ゴムなど）
+      </p>
+      <p style="font-size:.82rem; color:#555;">
+        <span class="map-label" style="background:#fff3e0; color:#e07b00;">ガラス</span>
+        愛知・福岡（AGC・日本板硝子など）
+      </p>
+    </div>
+  </div>
+
+  <!-- 外部リソース -->
+  <h2 class="section-title">🔗 もっと調べよう</h2>
+
+  <div class="resource-card">
+    <a href="https://www.nhk.or.jp/school/search/?keyword=%E8%87%AA%E5%8B%95%E8%BB%8A+%E9%83%A8%E5%93%81" target="_blank" rel="noopener">
+      <div class="resource-badge badge-nhk"><span class="badge-icon">📺</span>NHK</div>
+      <div class="resource-info">
+        <strong>NHK for School「自動車 部品」で検索</strong>
+        <small>部品メーカーや仕入れのしくみについての動画クリップを探してみよう。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="resource-card">
+    <a href="https://www.jama.or.jp/kids/industry/index.html" target="_blank" rel="noopener">
+      <div class="resource-badge badge-jama"><span class="badge-icon">🚘</span>JAMA</div>
+      <div class="resource-info">
+        <strong>日本自動車工業会 キッズ自動車館「産業のしくみ」</strong>
+        <small>自動車産業がどのように日本の経済を支えているかが分かる。関連企業の数も確認しよう。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="resource-card">
+    <a href="https://www.toyota.co.jp/jpn/sustainability/social_contribution/community/" target="_blank" rel="noopener">
+      <div class="resource-badge badge-toyota"><span class="badge-icon">🏭</span>トヨタ</div>
+      <div class="resource-info">
+        <strong>トヨタ 地域・サプライヤーとのつながり</strong>
+        <small>どのように地域の企業・人々と協力してものづくりをしているかが分かる。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <!-- クイズ -->
+  <h2 class="section-title">🧠 クイズにチャレンジ！</h2>
+
+  <div class="quiz-box">
+    <div class="quiz-q">日本で最も自動車関連工場が集まっている都道府県はどこ？</div>
+    <div class="quiz-options">
+      <button class="quiz-btn" onclick="answerQuiz(this, false, '神奈川は日産の本社があるけど、最大は違う県だよ。')">神奈川県</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, true, 'せいかい！トヨタ自動車の本社がある豊田市を中心に、愛知県には多くの関連企業がある。')">愛知県</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, false, '静岡も部品工場が多いけど、最大は違う県だよ。')">静岡県</button>
+    </div>
+    <div class="quiz-result"></div>
+  </div>
+
+  <div class="quiz-box">
+    <div class="quiz-q">「カンバン方式」で管理されているものはどれ？</div>
+    <div class="quiz-options">
+      <button class="quiz-btn" onclick="answerQuiz(this, false, '工場の看板ではないよ。')">工場の看板・標識</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, false, '工員の名前ではないよ。')">工員の名前リスト</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, true, 'せいかい！カンバン方式は、部品の種類・数量・届ける時間を管理するしくみだよ。')">部品の種類・数量・届ける時間</button>
+    </div>
+    <div class="quiz-result"></div>
+  </div>
+
+  <!-- メモ欄 -->
+  <h2 class="section-title">📝 調べたことをメモしよう</h2>
+  <div class="memo-box">
+    <label>部品について気づいたこと・疑問に思ったことを書こう</label>
+    <textarea data-key="buhin" placeholder="例：3万点もの部品を作るために、こんなにたくさんの工場がかかわっているとは知らなかった。"></textarea>
+    <button class="memo-save" onclick="saveMemo('buhin', this)">メモをほぞんする</button>
+  </div>
+
+  <!-- 学習完了 -->
+  <div style="text-align:center; margin-top:28px;">
+    <button onclick="markDone('buhin'); this.textContent='✅ 学習かんりょう！'; this.style.background='#2e8b57';"
+      style="background:var(--blue); color:#fff; border:none; border-radius:30px; padding:12px 32px; font-size:1rem; font-weight:700; cursor:pointer; font-family:inherit;">
+      ✅ このページの学習かんりょう！
+    </button>
+  </div>
+
+  <div style="margin-top:24px; display:flex; gap:12px; justify-content:space-between;">
+    <a href="?page=hito" target="_top" style="color:var(--blue); text-decoration:none; font-size:.9rem;">← ② 人々のくふうにもどる</a>
+    <a href="?page=sekai" target="_top" style="color:var(--blue); text-decoration:none; font-size:.9rem; font-weight:700;">④ 世界へとどく日本の車へ →</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>5年生 社会科「自動車づくりにはげむ人々」学習サイト</p>
+  <p style="margin-top:4px;">リンク先は外部サイトです。先生のしどうのもとで使用してください。</p>
+</footer>
+
+<?!= include('javascript'); ?>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⑤ かんきょうにやさしい車づくり｜自動車づくりにはげむ人々</title>
+  <?!= include('stylesheet'); ?>
+  <style>
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+      border-left: 3px solid var(--blue);
+      margin-bottom: 24px;
+    }
+    .tl-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .tl-dot {
+      position: absolute;
+      left: -38px;
+      top: 4px;
+      width: 18px; height: 18px;
+      background: var(--blue);
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px var(--blue);
+    }
+    .tl-year {
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin-bottom: 2px;
+    }
+    .tl-title {
+      font-size: .95rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 3px;
+    }
+    .tl-body {
+      font-size: .85rem;
+      color: #555;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+      margin-bottom: 20px;
+    }
+    .compare-table th {
+      background: var(--blue);
+      color: #fff;
+      padding: 8px 12px;
+      text-align: center;
+    }
+    .compare-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #e0e8f0;
+    }
+    .compare-table tr:nth-child(even) td { background: var(--blue-lt); }
+    .compare-table .label-col { font-weight: 700; color: #333; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-icon">🌱</div>
+    <div class="header-title">
+      <h1>⑤ かんきょうにやさしい車づくり</h1>
+      <p>自動車づくりにはげむ人々｜5年生 社会科</p>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="?page=index" target="_top">🏠 トップ</a>
+    <a href="?page=koutei" target="_top">① 工程</a>
+    <a href="?page=hito" target="_top">② 人々のくふう</a>
+    <a href="?page=buhin" target="_top">③ 部品</a>
+    <a href="?page=sekai" target="_top">④ 世界へ</a>
+    <a href="?page=kankyo" target="_top" class="active">⑤ 環境</a>
+    <a href="?page=matome" target="_top">✅ まとめ</a>
+  </div>
+</nav>
+
+<main>
+
+  <div class="matome-box" style="margin-bottom:24px;">
+    <h3>🔍 このページで調べること</h3>
+    <ul>
+      <li>自動車が環境に与えるえいきょうは何か（CO2など）</li>
+      <li>ハイブリッド車・電気自動車（EV）とはなにか</li>
+      <li>工場での環境への取り組みはどんなものがあるか</li>
+      <li>未来の自動車はどうなっていくか</li>
+    </ul>
+  </div>
+
+  <!-- 問題提起 -->
+  <div style="background:linear-gradient(135deg,#2e8b57,#1a5c38); color:#fff; border-radius:14px; padding:24px; margin-bottom:24px; box-shadow:var(--shadow);">
+    <h3 style="font-size:1.1rem; margin-bottom:10px;">🌏 自動車と地球環境の問題</h3>
+    <p style="font-size:.9rem; opacity:.95; line-height:1.8;">
+      世界中に約14億台もある自動車（2023年時点）。便利な反面、
+      ガソリンを燃やすことで出る<strong>CO₂（二酸化炭素）</strong>が地球温暖化の原因のひとつになっている。
+      日本の自動車メーカーは「走ること」と「環境を守ること」をどう両立しているか調べてみよう。
+    </p>
+  </div>
+
+  <!-- 技術タイムライン -->
+  <h2 class="section-title">⏳ 環境技術の進化タイムライン</h2>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">1997年</div>
+      <div class="tl-title">🔋 ハイブリッド車（HV）の誕生</div>
+      <div class="tl-body">トヨタが世界初の量産ハイブリッド車「プリウス」を発売。ガソリンエンジンと電気モーターを組み合わせ、燃費を大幅に向上させた。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2002年</div>
+      <div class="tl-title">💧 燃料電池車（FCV）の研究加速</div>
+      <div class="tl-body">水素と酸素を反応させて電気をつくる「燃料電池車」の開発が本格化。排気ガスは水だけ。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2010年</div>
+      <div class="tl-title">⚡ 電気自動車（EV）の普及開始</div>
+      <div class="tl-body">日産「リーフ」が世界初の量産EV（電気自動車）として発売。充電スタンドのインフラ整備も進む。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2014年</div>
+      <div class="tl-title">🚀 トヨタ「MIRAI」販売開始</div>
+      <div class="tl-body">水素で走る燃料電池車「MIRAI（ミライ）」が市販開始。走行中に出るのは水だけ。</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2030年代〜</div>
+      <div class="tl-title">🌱 脱炭素・EV化加速（目標）</div>
+      <div class="tl-body">日本政府・各自動車メーカーはガソリン車の新車販売終了を目標に設定。全てのモデルを電動化する計画を進めている。</div>
+    </div>
+  </div>
+
+  <!-- 動画 -->
+  <h2 class="section-title">🎬 動画で学ぼう</h2>
+
+  <div class="video-grid">
+    <div class="video-item">
+      <h4>⚡ 電気自動車（EV）のしくみ</h4>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/FsRKBfQ_gFg"
+          title="電気自動車のしくみ"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-caption">EVがどのように動くかをわかりやすく解説</p>
+    </div>
+
+    <div class="video-item">
+      <h4>🌱 トヨタの環境への取り組み</h4>
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/3v0bQRFwBko"
+          title="トヨタ 環境 取り組み"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="video-caption">出典：Toyota Motor Corporation 公式YouTube</p>
+    </div>
+  </div>
+
+  <!-- 比較表 -->
+  <h2 class="section-title">🔄 ガソリン車・HV・EVのちがい</h2>
+
+  <table class="compare-table">
+    <tr>
+      <th>くらべるポイント</th>
+      <th>⛽ ガソリン車</th>
+      <th>🔋 ハイブリッド（HV）</th>
+      <th>⚡ 電気自動車（EV）</th>
+    </tr>
+    <tr>
+      <td class="label-col">エネルギー</td>
+      <td>ガソリン</td>
+      <td>ガソリン＋電気</td>
+      <td>電気のみ</td>
+    </tr>
+    <tr>
+      <td class="label-col">CO₂の排出</td>
+      <td>多い</td>
+      <td>少ない</td>
+      <td>走行中はゼロ</td>
+    </tr>
+    <tr>
+      <td class="label-col">補充方法</td>
+      <td>ガソリンスタンド</td>
+      <td>ガソリンスタンド</td>
+      <td>充電スタンド</td>
+    </tr>
+    <tr>
+      <td class="label-col">航続距離</td>
+      <td>長い</td>
+      <td>長い</td>
+      <td>短め（改善中）</td>
+    </tr>
+    <tr>
+      <td class="label-col">車両価格</td>
+      <td>安め</td>
+      <td>やや高め</td>
+      <td>高め（下がってきた）</td>
+    </tr>
+    <tr>
+      <td class="label-col">音・乗り心地</td>
+      <td>エンジン音あり</td>
+      <td>静か</td>
+      <td>非常に静か</td>
+    </tr>
+  </table>
+
+  <!-- 工場の取り組み -->
+  <h2 class="section-title">🏭 工場での環境への取り組み</h2>
+
+  <div class="card-grid">
+    <div class="card card-green">
+      <div class="card-header">☀️ 再生可能エネルギー</div>
+      <div class="card-body">
+        <p>工場の屋根に太陽光パネルを設置。工場で使う電気を太陽の力でつくる取り組みを進めている。</p>
+      </div>
+    </div>
+    <div class="card card-blue">
+      <div class="card-header">💧 水のリサイクル</div>
+      <div class="card-body">
+        <p>塗装などで使った水をきれいにして再利用。工場から出る排水を減らし、川や海を汚さないくふうをしている。</p>
+      </div>
+    </div>
+    <div class="card card-orange">
+      <div class="card-header">♻️ 廃材リサイクル</div>
+      <div class="card-body">
+        <p>プレスで切り取った鉄くずや使用済みタイヤ・バッテリーを回収してリサイクル。廃棄物ゼロを目指す工場もある。</p>
+      </div>
+    </div>
+    <div class="card card-red">
+      <div class="card-header">🌲 植林・生態系保護</div>
+      <div class="card-body">
+        <p>工場の周りに木を植えたり、地域の自然を守る活動もおこなっている。カーボンニュートラルへの道のり。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 外部リソース -->
+  <h2 class="section-title">🔗 もっと調べよう</h2>
+
+  <div class="resource-card">
+    <a href="https://www.nhk.or.jp/school/search/?keyword=%E9%9B%BB%E6%B0%97%E8%87%AA%E5%8B%95%E8%BB%8A" target="_blank" rel="noopener">
+      <div class="resource-badge badge-nhk"><span class="badge-icon">📺</span>NHK</div>
+      <div class="resource-info">
+        <strong>NHK for School「電気自動車」で動画を探す</strong>
+        <small>EVやハイブリッド車の仕組みについての動画クリップを探してみよう。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="resource-card">
+    <a href="https://www.toyota.co.jp/jpn/sustainability/environment/" target="_blank" rel="noopener">
+      <div class="resource-badge badge-toyota"><span class="badge-icon">🌱</span>トヨタ</div>
+      <div class="resource-info">
+        <strong>トヨタ 環境への取り組み（公式）</strong>
+        <small>カーボンニュートラル・水素・EV化など、トヨタの環境戦略がまとめられている。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <div class="resource-card">
+    <a href="https://www.nissan-global.com/JP/ENVIRONMENT/" target="_blank" rel="noopener">
+      <div class="resource-badge badge-nissan"><span class="badge-icon">🌱</span>日産</div>
+      <div class="resource-info">
+        <strong>日産 環境・サステナビリティ</strong>
+        <small>日産のEV戦略「ニッサン・グリーンプログラム」など環境取り組みを調べられる。</small>
+      </div>
+      <div class="resource-arrow">›</div>
+    </a>
+  </div>
+
+  <!-- 考えよう -->
+  <h2 class="section-title">💬 未来の車を想像しよう</h2>
+
+  <div style="background:#fff; border-radius:14px; padding:20px; box-shadow:var(--shadow); margin-bottom:20px;">
+    <p style="font-weight:700; margin-bottom:10px;">🚗 2050年の車はどんな車になっていると思う？</p>
+    <p style="font-size:.85rem; color:#555;">
+      ヒント：自動運転・空飛ぶ車・水素・AI・リサイクル素材…いろんな視点で考えてみよう。
+    </p>
+  </div>
+
+  <!-- クイズ -->
+  <h2 class="section-title">🧠 クイズにチャレンジ！</h2>
+
+  <div class="quiz-box">
+    <div class="quiz-q">世界初の量産ハイブリッド車「プリウス」をつくった会社はどこ？</div>
+    <div class="quiz-options">
+      <button class="quiz-btn" onclick="answerQuiz(this, false, '日産も電気自動車で有名だけど、プリウスは違う会社だよ。')">日産</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, true, 'せいかい！トヨタが1997年に世界初の量産ハイブリッド車「プリウス」を発売したよ。')">トヨタ</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, false, 'ホンダも環境車をつくっているけど、プリウスは違う会社だよ。')">ホンダ</button>
+    </div>
+    <div class="quiz-result"></div>
+  </div>
+
+  <div class="quiz-box">
+    <div class="quiz-q">電気自動車（EV）が走るときに出るものはなに？</div>
+    <div class="quiz-options">
+      <button class="quiz-btn" onclick="answerQuiz(this, false, 'EVは排気ガスを出さないよ。')">CO₂（二酸化炭素）</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, false, 'EVから煙は出ないよ。')">黒い煙</button>
+      <button class="quiz-btn" onclick="answerQuiz(this, true, 'せいかい！走行中にガスや煙は出ないよ。だから「ゼロエミッション車」とも呼ばれる。')">何も出ない（排気ガスゼロ）</button>
+    </div>
+    <div class="quiz-result"></div>
+  </div>
+
+  <!-- メモ欄 -->
+  <h2 class="section-title">📝 調べたことをメモしよう</h2>
+  <div class="memo-box">
+    <label>環境にやさしい車づくりについて、気づいたこと・考えを書こう</label>
+    <textarea data-key="kankyo" placeholder="例：ガソリン車からEVに変わると、CO2がどのくらい減るんだろう？工場の電気も再生可能エネルギーにすれば…"></textarea>
+    <button class="memo-save" onclick="saveMemo('kankyo', this)">メモをほぞんする</button>
+  </div>
+
+  <!-- 学習完了 -->
+  <div style="text-align:center; margin-top:28px;">
+    <button onclick="markDone('kankyo'); this.textContent='✅ 学習かんりょう！'; this.style.background='#2e8b57';"
+      style="background:var(--blue); color:#fff; border:none; border-radius:30px; padding:12px 32px; font-size:1rem; font-weight:700; cursor:pointer; font-family:inherit;">
+      ✅ このページの学習かんりょう！
+    </button>
+  </div>
+
+  <div style="margin-top:24px; display:flex; gap:12px; justify-content:space-between;">
+    <a href="?page=sekai" target="_top" style="color:var(--blue); text-decoration:none; font-size:.9rem;">← ④ 世界へにもどる</a>
+    <a href="?page=matome" target="_top" style="color:var(--blue); text-decoration:none; font-size:.9rem; font-weight:700;">✅ まとめ・クイズへ →</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>5年生 社会科「自動車づくりにはげむ人々」学習サイト</p>
+  <p style="margin-top:4px;">リンク先は外部サイトです。先生のしどうのもとで使用してください。</p>
+</footer>
+
+<?!= include('javascript'); ?>
+</body>
+</html>
